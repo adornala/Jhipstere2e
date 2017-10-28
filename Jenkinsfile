@@ -16,7 +16,8 @@ pipeline {
         stage('Deploy War') {
           steps {
             pwd(tmp: true)
-            sh 'pwd'
+            sh '''current_dir=$(pwd)
+echo $current_dir'''
           }
         }
         stage('Deploy Web Resources') {
