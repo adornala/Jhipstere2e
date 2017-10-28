@@ -15,8 +15,8 @@ pipeline {
       parallel {
         stage('Deploy War') {
           steps {
-            sh '''cp build/lib/*.war ~/tomcat/webapps/ && echo "Copied War to Tomcat"
-'''
+            pwd(tmp: true)
+            sh 'pwd'
           }
         }
         stage('Deploy Web Resources') {
