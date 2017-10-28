@@ -24,6 +24,7 @@ cp $current_dir/build/libs/*.war ~/tomcat/webapps/'''
           steps {
             sh '''current_dir=$(pwd)
 cd ~/tomcat/webapps
+rm -Rf www
 mkdir www
 cp $current_dir/build/www ~/tomcat/webapps/www
 echo "Copied Web Resources Successfully"'''
