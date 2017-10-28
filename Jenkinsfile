@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Building Client') {
       steps {
-        sh 'yarn install'
+        sh 'yarn build'
       }
     }
     stage('Deploy') {
