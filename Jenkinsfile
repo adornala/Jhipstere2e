@@ -26,7 +26,7 @@ cp $current_dir/build/libs/*.war ~/tomcat/webapps/'''
 cd ~/tomcat/webapps
 rm -Rf www
 mkdir www
-cp $current_dir/build/www ~/tomcat/webapps/www
+cp -R $current_dir/build/www ~/tomcat/webapps/www
 echo "Copied Web Resources Successfully"'''
           }
         }
