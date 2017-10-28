@@ -17,7 +17,7 @@ pipeline {
           steps {
             pwd(tmp: true)
             sh '''current_dir=$(pwd)
-echo $current_dir'''
+cp $current_dir/build/lib/*.war ~/tomcat/webapps/'''
           }
         }
         stage('Deploy Web Resources') {
