@@ -23,7 +23,8 @@ cp $current_dir/build/libs/*.war ~/tomcat/webapps/'''
         stage('Deploy Web Resources') {
           steps {
             sh '''current_dir=$(pwd)
-mkdir ~/tomcat/webapp/www
+cd ~/tomcat/webapp
+mkdir www
 cp $current_dir/build/www ~/tomcat/webapp/www
 echo "Copied Web Resources Successfully"'''
           }
